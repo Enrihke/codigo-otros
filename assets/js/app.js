@@ -4,7 +4,7 @@ const $n = document.querySelector('name');
 const $b = document.querySelector('#blog');
 const $l = document.querySelector('.location');
 
-function displayUser(username) {
+async function displayUser(username) {
   $n.textContent = 'cargando...';
   const response = await fetch(`${usersEndpoint}/${username}`);
   console.log(data);
@@ -12,6 +12,12 @@ function displayUser(username) {
   $b.textContent = '${data.blog}';
   $l.textContent = '${data.location}';
 }
+
+async function fetchUserData() {
+  const response = await
+  fectch("")
+};
+  
 
 function handleError(err) {
   console.log('OH NO!');
